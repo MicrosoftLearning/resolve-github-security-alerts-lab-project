@@ -2,16 +2,16 @@
 
 ## ⚠️ Educational Use Only
 
-This project is intended **exclusively for educational purposes** and should **NOT** be used in production environments or as a model for production code. The codebase contains intentional security vulnerabilities designed for learning how to identify and resolve security issues using GitHub Copilot and GitHub Security features.
+This project is intended **exclusively for educational purposes** and should **NOT** be used in production environments or as a model for production code. The codebase contains intentional security vulnerabilities and is designed for a training environment. This project can be used in a course that teaches how to identify and resolve security issues (exposed secrets) using GitHub Copilot and GitHub Security features.
 
 ## Overview
 
-Contoso Order Processor is a realistic e-commerce order processing application that demonstrates common security vulnerabilities found in real-world applications. This project is designed as a training lab for developers learning to:
+Contoso Order Processor simulates an order processing application. The app can be used to help train developers on identifying and resolving GitHub Secret Scanning alerts using GitHub Copilot. This project can be used with training that covers the following developer security topics:
 
-- Identify exposed secrets using GitHub Secret Scanning
-- Resolve security alerts using GitHub Copilot
-- Implement secure configuration management practices
-- Apply security best practices in .NET applications
+- Using GitHub Secret Scanning to identify exposed secrets
+- Using GitHub Copilot to resolve security alerts
+- Implementing secure configuration management practices
+- Applying security best practices in .NET applications
 
 ## Application Features
 
