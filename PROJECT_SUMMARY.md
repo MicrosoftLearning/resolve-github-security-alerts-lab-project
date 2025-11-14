@@ -94,7 +94,7 @@ The application produces deterministic, verifiable output:
 
 ``` plaintext
 Order Amount: $148.94 (constant)
-Customer: John Doe (john.doe@example.com)
+Customer: Lee Gu (lee.gu@example.com)
 Items: Wireless Mouse ($59.98), USB-C Cable ($38.97), Laptop Stand ($49.99)
 Status Flow: Pending → Payment Confirmed → Confirmed → Shipped
 Dynamic Elements: Order ID, Transaction ID, Tracking Number (timestamp/GUID based)
@@ -113,37 +113,13 @@ Students who complete this lab will:
 
 ## Lab Workflow
 
-### Phase 1: Discovery (15 min)
-
-- Run application to verify baseline functionality
-- Use GitHub Secret Scanning to identify issues
-- Use GitHub Copilot to scan for vulnerabilities
-
-### Phase 2: Analysis (10 min)
-
-- Review identified secrets and risk levels
-- Plan remediation strategy
-- Learn secure configuration concepts
-
-### Phase 3: Implementation (45 min)
-
-- Create appsettings.json structure
-- Initialize .NET User Secrets
-- Refactor services to use dependency injection
-- Load configuration from secure sources
-
-### Phase 4: Verification (15 min)
-
-- Build and run refactored application
-- Compare output to baseline
-- Verify GitHub Secret Scanning shows 0 alerts
-- Confirm no hard-coded secrets remain
-
-### Phase 5: Reflection (10 min)
-
-- Document changes made
-- Discuss lessons learned
-- Review best practices
+1. Import the ContosoOrderProcessor repository.
+1. Enable secret scanning and review security alerts on GitHub.
+1. Clone the repository locally and open the project in Visual Studio Code.
+1. Use GitHub Copilot's Ask mode to analyze secret scanning alerts.
+1. Use GitHub Copilot's Agent mode to remediate secret scanning alerts.
+1. Commit and push changes to GitHub.
+1. Enable and test Push Protection.
 
 ## Success Criteria
 
@@ -153,8 +129,8 @@ The application is designed to enable clear success verification:
 - [ ] Application runs and produces expected output
 - [ ] Order amount matches baseline ($148.94)
 - [ ] All workflow steps execute successfully
-- [ ] GitHub Secret Scanning reports 0 alerts
-- [ ] No hard-coded secrets in any code file
+- [ ] GitHub Secret Scanning reports fewer alerts
+- [ ] Fewer hard-coded secrets in code files
 - [ ] Configuration loaded from secure sources
 - [ ] Services use dependency injection
 
@@ -176,9 +152,9 @@ The application is designed to enable clear success verification:
 - **Complex enough** to require thoughtful solutions
 - **Safe enough** with simulated external calls
 
-### Why .NET 9.0?
+### Why .NET 9 or later?
 
-- Latest framework with modern C# features
+- Recent/supported frameworks with modern C# features
 - Strong security tooling support
 - Good GitHub Copilot integration
 - Common in enterprise environments

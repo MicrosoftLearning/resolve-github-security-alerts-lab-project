@@ -9,6 +9,7 @@ This application demonstrates common security issues that can be detected by Git
 ## Exposed Secrets by File
 
 ### 1. Services/DatabaseService.cs
+
 - **Type**: Database Connection String
 - **Issue**: Hard-coded SQL Server connection string with credentials
 - **Line**: 9
@@ -16,15 +17,17 @@ This application demonstrates common security issues that can be detected by Git
 - **Severity**: Critical
 
 ### 2. Services/PaymentService.cs
+
 - **Type**: Payment API Keys
 - **Issue**: Hard-coded Stripe and PayPal API credentials
 - **Lines**: 9, 12-13
-- **Value Types**: 
+- **Value Types**:
   - Stripe Live API Key (sk_live_*)
   - PayPal Client ID and Secret
 - **Severity**: Critical
 
 ### 3. Services/EmailService.cs
+
 - **Type**: Email Service Credentials
 - **Issue**: Hard-coded SendGrid API key and SMTP credentials
 - **Lines**: 9, 12-14
@@ -34,6 +37,7 @@ This application demonstrates common security issues that can be detected by Git
 - **Severity**: High
 
 ### 4. Configuration/AppConfig.cs
+
 - **Type**: Multiple Cloud and Service Credentials
 - **Issue**: Hard-coded credentials for various services
 - **Lines**: 10-26
@@ -48,6 +52,7 @@ This application demonstrates common security issues that can be detected by Git
 ## Expected Detections
 
 GitHub Secret Scanning should detect the following patterns:
+
 1. ✓ Azure SQL Database connection strings
 2. ✓ Stripe API keys (live keys)
 3. ✓ PayPal API credentials
@@ -59,6 +64,7 @@ GitHub Secret Scanning should detect the following patterns:
 ## Remediation Approach
 
 Students should learn to:
+
 1. Use environment variables for sensitive configuration
 2. Implement secure configuration management (e.g., Azure Key Vault, AWS Secrets Manager)
 3. Use .NET User Secrets for local development
@@ -68,16 +74,18 @@ Students should learn to:
 ## Verification
 
 After remediation, the application should:
+
 - ✓ Continue to run successfully
 - ✓ Produce the same verifiable output
-- ✓ Have no exposed secrets in the codebase
+- ✓ Have fewer exposed secrets in the codebase
 - ✓ Load credentials from secure configuration sources
 
 ## Sample Output
 
 The application produces consistent, verifiable output including:
+
 - Order ID (with timestamp)
-- Customer information (John Doe, john.doe@example.com)
+- Customer information (Lee Gu, lee.gu@example.com)
 - Order amount ($148.94)
 - Transaction ID
 - Tracking number

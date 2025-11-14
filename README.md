@@ -90,7 +90,7 @@ The application produces verifiable console output showing a complete order proc
 
 ``` plaintext
 ╔════════════════════════════════════════════════════════╗
-║   Contoso Order Processor - E-Commerce Application    ║
+║   Contoso Order Processor - E-Commerce Application     ║
 ╚════════════════════════════════════════════════════════╝
 
 === Application Configuration ===
@@ -99,11 +99,11 @@ Environment: Production
 ...
 
 ╔════════════════════════════════════════════════════════╗
-║              ORDER PROCESSING COMPLETED               ║
+║              ORDER PROCESSING COMPLETED                ║
 ╚════════════════════════════════════════════════════════╝
 
 ✓ Order ID: ORD-20251113202904
-✓ Customer: John Doe (john.doe@example.com)
+✓ Customer: Lee Gu (lee.gu@example.com)
 ✓ Total Amount: $148.94
 ✓ Payment Method: Stripe
 ✓ Status: Shipped
@@ -111,27 +111,15 @@ Environment: Production
 ✓ Tracking Number: TRK-EEC64BA1
 ```
 
-## Training Lab Objectives
+## Lab Tasks
 
-### Part 1: Identify Security Issues
-
-- Use GitHub Secret Scanning to identify exposed secrets
-- Review GitHub Security Alerts in your repository
-- Understand the risks associated with each exposed secret
-
-### Part 2: Remediate Security Issues
-
-- Use GitHub Copilot to suggest secure alternatives
-- Implement environment variables and configuration files
-- Utilize .NET User Secrets for local development
-- Configure Azure Key Vault or AWS Secrets Manager for production
-
-### Part 3: Verify Remediation
-
-- Confirm all security alerts are resolved
-- Run the application to verify it still works correctly
-- Compare output before and after remediation
-- Ensure no secrets remain in the codebase
+1. Import the ContosoOrderProcessor repository.
+1. Enable secret scanning and review security alerts on GitHub.
+1. Clone the repository locally and open the project in Visual Studio Code.
+1. Use GitHub Copilot's Ask mode to analyze secret scanning alerts.
+1. Use GitHub Copilot's Agent mode to remediate secret scanning alerts.
+1. Commit and push changes to GitHub.
+1. Enable and test Push Protection.
 
 ## Security Best Practices to Learn
 
