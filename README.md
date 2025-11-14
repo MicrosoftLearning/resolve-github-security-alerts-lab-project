@@ -2,11 +2,13 @@
 
 ## ⚠️ Educational Use Only
 
-This project is intended **exclusively for educational purposes**. The code files included in this project should **NOT** be used in production environments and aren't intended to be a model for production code. The codebase contains intentional security vulnerabilities and is designed for a training environment. This project can be used in a course that teaches how to identify and resolve security issues (exposed secrets) using GitHub Copilot and GitHub Security features. Other than the intentional vulnerabilities, the codebase is designed to follow standard coding practices.
+This project is intended for educational purposes only. The codebase contains intentional security vulnerabilities in the form of exposed secrets (e.g., API keys, connection strings, etc.). The code files in this project should **NOT** be used in production environments and aren't designed to model production code.
+
+This project is designed for a course that teaches how to identify and resolve security vulnerabilities (exposed secrets) using GitHub Copilot and GitHub Security features. Other than the intentional code vulnerabilities, the codebase is designed to follow coding best practices.
 
 ## Overview
 
-Contoso Order Processor simulates an order processing application. The app can be used to help train developers on identifying and resolving GitHub Secret Scanning alerts using GitHub Copilot. This project can be used with training that covers the following developer security topics:
+ContosoOrderProcessor simulates an order processing application. The app can be used to help developers learn how to resolve GitHub Secret Scanning alerts using GitHub Copilot. This project supports the following developer security topics:
 
 - Using GitHub Secret Scanning to identify exposed secrets
 - Using GitHub Copilot to resolve security alerts
