@@ -27,8 +27,6 @@ ContosoOrderProcessor/
 ### Documentation Files
 
 - **README.md** - Comprehensive project overview and setup instructions
-- **LAB_GUIDE.md** - Step-by-step lab instructions for students
-- **INSTRUCTOR_NOTES.md** - Detailed teaching guide with troubleshooting and assessment criteria
 - **EXPOSED_SECRETS_REFERENCE.md** - Reference guide listing all intentional vulnerabilities
 - **SECURITY.md** - Security policy (existing)
 - **LICENSE-CODE** - License information (existing)

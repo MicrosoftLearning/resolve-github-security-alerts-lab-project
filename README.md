@@ -2,7 +2,7 @@
 
 ## ⚠️ Educational Use Only
 
-This project is intended **exclusively for educational purposes** and should **NOT** be used in production environments or as a model for production code. The codebase contains intentional security vulnerabilities and is designed for a training environment. This project can be used in a course that teaches how to identify and resolve security issues (exposed secrets) using GitHub Copilot and GitHub Security features.
+This project is intended **exclusively for educational purposes**. The code files included in this project should **NOT** be used in production environments and aren't intended to be a model for production code. The codebase contains intentional security vulnerabilities and is designed for a training environment. This project can be used in a course that teaches how to identify and resolve security issues (exposed secrets) using GitHub Copilot and GitHub Security features. Other than the intentional vulnerabilities, the codebase is designed to follow standard coding practices.
 
 ## Overview
 
