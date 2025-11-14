@@ -2,13 +2,13 @@
 
 ## What Was Created
 
-A comprehensive, realistic e-commerce order processing application designed for training developers on identifying and resolving GitHub Secret Scanning alerts using GitHub Copilot.
+A comprehensive e-commerce order processing application that's designed to help train developers on identifying and resolving GitHub Secret Scanning alerts using GitHub Copilot.
 
 ## Project Structure
 
 ### Core Application Files
 
-```
+```plaintext
 ContosoOrderProcessor/
 ├── Configuration/
 │   └── AppConfig.cs                    # Application config with exposed AWS, Azure, Twilio, JWT secrets
@@ -92,7 +92,7 @@ Despite being a training project, the code follows best practices:
 
 The application produces deterministic, verifiable output:
 
-```
+``` plaintext
 Order Amount: $148.94 (constant)
 Customer: John Doe (john.doe@example.com)
 Items: Wireless Mouse ($59.98), USB-C Cable ($38.97), Laptop Stand ($49.99)
@@ -114,28 +114,33 @@ Students who complete this lab will:
 ## Lab Workflow
 
 ### Phase 1: Discovery (15 min)
+
 - Run application to verify baseline functionality
 - Use GitHub Secret Scanning to identify issues
 - Use GitHub Copilot to scan for vulnerabilities
 
 ### Phase 2: Analysis (10 min)
+
 - Review identified secrets and risk levels
 - Plan remediation strategy
 - Learn secure configuration concepts
 
 ### Phase 3: Implementation (45 min)
+
 - Create appsettings.json structure
 - Initialize .NET User Secrets
 - Refactor services to use dependency injection
 - Load configuration from secure sources
 
 ### Phase 4: Verification (15 min)
+
 - Build and run refactored application
 - Compare output to baseline
 - Verify GitHub Secret Scanning shows 0 alerts
 - Confirm no hard-coded secrets remain
 
 ### Phase 5: Reflection (10 min)
+
 - Document changes made
 - Discuss lessons learned
 - Review best practices
@@ -182,6 +187,7 @@ The application is designed to enable clear success verification:
 ## Usage Scenarios
 
 ### For Training Courses
+
 - Microsoft Learn modules
 - University security courses
 - Corporate security training
@@ -189,12 +195,14 @@ The application is designed to enable clear success verification:
 - Bootcamp exercises
 
 ### For Self-Study
+
 - Learning GitHub Security features
 - Practicing secure coding
 - Understanding configuration management
 - Exploring GitHub Copilot capabilities
 
 ### For Demonstrations
+
 - GitHub Security feature showcases
 - GitHub Copilot effectiveness demos
 - Before/after security comparisons
@@ -216,6 +224,7 @@ The project can be extended for advanced learning:
 ## Files Created/Modified
 
 ### New Files Created (7)
+
 1. `Configuration/AppConfig.cs` - 93 lines
 2. `Models/Customer.cs` - 22 lines
 3. `Models/Order.cs` - 44 lines
@@ -225,16 +234,19 @@ The project can be extended for advanced learning:
 7. `Services/PaymentService.cs` - 98 lines
 
 ### Modified Files (2)
+
 1. `Program.cs` - Completely refactored from 31 to 120 lines
 2. `ContosoOrderProcessor.csproj` - Added package references
 
 ### New Documentation (4)
+
 1. `README.md` - Enhanced with comprehensive overview
 2. `LAB_GUIDE.md` - Complete student guide (200+ lines)
 3. `INSTRUCTOR_NOTES.md` - Detailed teaching guide (350+ lines)
 4. `EXPOSED_SECRETS_REFERENCE.md` - Vulnerability reference
 
 ### Total Lines of Code
+
 - **Application Code**: ~750 lines
 - **Documentation**: ~800 lines
 - **Total**: ~1,550 lines
@@ -242,11 +254,13 @@ The project can be extended for advanced learning:
 ## Testing Results
 
 ### Build Status
+
 ✓ Project builds successfully without errors
 ✓ All dependencies resolve correctly
 ✓ No compilation warnings
 
 ### Runtime Status
+
 ✓ Application runs successfully from start to finish
 ✓ All services initialize correctly
 ✓ Complete workflow executes without exceptions
@@ -254,6 +268,7 @@ The project can be extended for advanced learning:
 ✓ Simulated operations log appropriately
 
 ### Security Status (Intentional)
+
 ❌ 10 types of secrets exposed (as designed for training)
 ❌ GitHub Secret Scanning will detect multiple issues
 ⚠️ Hard-coded credentials present (intentional for lab)
@@ -261,16 +276,19 @@ The project can be extended for advanced learning:
 ## Maintenance Notes
 
 ### Keeping Secrets Realistic
+
 - Periodically review GitHub Secret Scanning patterns
 - Update secret formats to match real-world examples
 - Ensure secrets match current detection capabilities
 
 ### Updating Dependencies
+
 - Test with new .NET versions
 - Update package references as needed
 - Verify compatibility with GitHub tools
 
 ### Improving Documentation
+
 - Gather feedback from lab participants
 - Update based on common questions
 - Add clarifications where confusion occurs
@@ -278,6 +296,7 @@ The project can be extended for advanced learning:
 ## Contact and Support
 
 For questions or issues with this training lab:
+
 - Review the LAB_GUIDE.md for student instructions
 - Check INSTRUCTOR_NOTES.md for teaching guidance
 - Refer to EXPOSED_SECRETS_REFERENCE.md for vulnerability details

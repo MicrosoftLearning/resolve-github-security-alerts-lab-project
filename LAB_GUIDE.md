@@ -1,11 +1,13 @@
 # Lab Quick Start Guide
 
 ## Objective
+
 Learn to identify and resolve GitHub Secret Scanning alerts using GitHub Copilot in a realistic e-commerce application.
 
 ## Before You Start
 
 ### 1. Verify Application Works
+
 ```powershell
 cd ContosoOrderProcessor
 dotnet build
@@ -13,12 +15,14 @@ dotnet run
 ```
 
 **Expected Output:**
+
 - Complete order processing workflow
 - Order ID, Customer info, Total amount ($148.94)
 - Transaction and tracking numbers
 - Success message at the end
 
 ### 2. Document Baseline Output
+
 Save the console output for comparison after remediation.
 
 ## Lab Steps
@@ -26,16 +30,19 @@ Save the console output for comparison after remediation.
 ### Step 1: Identify Exposed Secrets (15 minutes)
 
 **Using GitHub Secret Scanning:**
+
 1. Navigate to your repository on GitHub
 2. Go to Security → Secret scanning alerts
 3. Review all detected secrets
 
 **Using GitHub Copilot:**
+
 1. Open the Copilot Chat panel
 2. Ask: "Scan this codebase for exposed secrets and security vulnerabilities"
 3. Review the identified issues
 
 **Expected Findings:**
+
 - Database connection strings (DatabaseService.cs)
 - Payment API keys - Stripe, PayPal (PaymentService.cs)
 - Email service credentials - SendGrid, SMTP (EmailService.cs)
@@ -48,11 +55,13 @@ Save the console output for comparison after remediation.
 ### Step 2: Plan Remediation Strategy (10 minutes)
 
 **Ask GitHub Copilot:**
+
 - "What's the best approach to securely manage these credentials in a .NET application?"
 - "How should I implement configuration management for this application?"
 - "Show me how to use .NET User Secrets for local development"
 
 **Key Concepts to Implement:**
+
 - Environment variables
 - .NET User Secrets (for local dev)
 - Configuration interfaces
@@ -64,12 +73,15 @@ Save the console output for comparison after remediation.
 #### Create Configuration Structure
 
 1. **Create appsettings.json:**
+
    - Ask Copilot: "Create an appsettings.json file for this application with all required configuration sections (without secrets)"
 
 2. **Create Configuration Models:**
+
    - Ask Copilot: "Create strongly-typed configuration classes for database, payment, email, and cloud services"
 
 3. **Initialize User Secrets:**
+
    ```powershell
    dotnet user-secrets init
    dotnet user-secrets set "DatabaseConfig:ConnectionString" "your-connection-string"
@@ -100,12 +112,15 @@ Save the console output for comparison after remediation.
 #### Check for Remaining Secrets
 
 1. **Using GitHub Copilot:**
+
    - Ask: "Scan the codebase again for any remaining exposed secrets"
-   
+
 2. **Using grep/search:**
+
    - Search for patterns like: "Password=", "Key=", "Secret=", "AKIA", "sk_live", "SG."
 
 3. **Using GitHub Secret Scanning:**
+
    - Push your changes to a branch
    - Verify no new secret scanning alerts
 
@@ -117,6 +132,7 @@ dotnet run
 ```
 
 **Verify:**
+
 - ✓ Application builds without errors
 - ✓ Application runs successfully
 - ✓ Output matches baseline (same order flow)
@@ -126,6 +142,7 @@ dotnet run
 ### Step 5: Document Changes (10 minutes)
 
 Create a summary of:
+
 1. Secrets identified
 2. Remediation approach used
 3. Configuration management strategy
@@ -135,18 +152,24 @@ Create a summary of:
 ## Common Issues and Solutions
 
 ### Issue: Application can't find configuration
+
 **Solution:** Ensure user secrets are set correctly
+
 ```powershell
 dotnet user-secrets list
 ```
 
 ### Issue: Dependency injection errors
+
 **Solution:** Verify service registration in Program.cs
+
 - Check that all configuration classes are registered
 - Ensure services are registered with the correct lifetime
 
 ### Issue: NullReferenceException at runtime
-**Solution:** 
+
+**Solution:**
+
 - Verify all configuration values are set in user secrets
 - Check that configuration binding is working correctly
 - Use null-coalescing operators for optional config values
@@ -172,12 +195,14 @@ dotnet user-secrets list
 ## Need Help?
 
 Use GitHub Copilot Chat to:
+
 - Ask for clarification on any security concept
 - Get code suggestions for specific patterns
 - Debug configuration issues
 - Learn more about best practices
 
 Example prompts:
+
 - "Explain why hard-coding secrets is dangerous"
 - "Show me how to test if my configuration is loaded correctly"
 - "What's the difference between User Secrets and environment variables?"

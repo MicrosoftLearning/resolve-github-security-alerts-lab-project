@@ -10,7 +10,7 @@ namespace ContosoOrderProcessor
         static void Main(string[] args)
         {
             Console.WriteLine("╔════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║   Contoso Order Processor - E-Commerce Application    ║");
+            Console.WriteLine("║   Contoso Order Processor - E-Commerce Application     ║");
             Console.WriteLine("╚════════════════════════════════════════════════════════╝\n");
 
             try
@@ -122,7 +122,7 @@ namespace ContosoOrderProcessor
 
                 // Final summary
                 Console.WriteLine("\n╔════════════════════════════════════════════════════════╗");
-                Console.WriteLine("║              ORDER PROCESSING COMPLETED               ║");
+                Console.WriteLine("║              ORDER PROCESSING COMPLETED                ║");
                 Console.WriteLine("╚════════════════════════════════════════════════════════╝");
                 Console.WriteLine($"\n✓ Order ID: {order.OrderId}");
                 Console.WriteLine($"✓ Customer: {customer.Name} ({customer.Email})");

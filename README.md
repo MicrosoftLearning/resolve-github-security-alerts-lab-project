@@ -27,7 +27,7 @@ The application simulates a complete e-commerce order processing workflow includ
 
 ## Project Structure
 
-```
+``` plaintext
 ContosoOrderProcessor/
 ├── Configuration/
 │   └── AppConfig.cs              # Application configuration (contains exposed secrets)
@@ -48,6 +48,7 @@ ContosoOrderProcessor/
 The application contains the following **intentional** security issues for training purposes:
 
 ### Exposed Secrets
+
 - ❌ Hard-coded SQL Server connection strings
 - ❌ Hard-coded Stripe API keys
 - ❌ Hard-coded PayPal credentials
@@ -71,12 +72,14 @@ These secrets should be detected by GitHub Secret Scanning and resolved using se
 ## Running the Application
 
 ### Build the Project
+
 ```powershell
 cd ContosoOrderProcessor
 dotnet build
 ```
 
 ### Run the Application
+
 ```powershell
 dotnet run
 ```
@@ -85,7 +88,7 @@ dotnet run
 
 The application produces verifiable console output showing a complete order processing workflow:
 
-```
+``` plaintext
 ╔════════════════════════════════════════════════════════╗
 ║   Contoso Order Processor - E-Commerce Application    ║
 ╚════════════════════════════════════════════════════════╝
@@ -111,17 +114,20 @@ Environment: Production
 ## Training Lab Objectives
 
 ### Part 1: Identify Security Issues
+
 - Use GitHub Secret Scanning to identify exposed secrets
 - Review GitHub Security Alerts in your repository
 - Understand the risks associated with each exposed secret
 
 ### Part 2: Remediate Security Issues
+
 - Use GitHub Copilot to suggest secure alternatives
 - Implement environment variables and configuration files
 - Utilize .NET User Secrets for local development
 - Configure Azure Key Vault or AWS Secrets Manager for production
 
 ### Part 3: Verify Remediation
+
 - Confirm all security alerts are resolved
 - Run the application to verify it still works correctly
 - Compare output before and after remediation
@@ -161,4 +167,3 @@ See [LICENSE-CODE](./LICENSE-CODE) for licensing information.
 ## Security Policy
 
 See [SECURITY.md](./SECURITY.md) for our security policy (part of the training exercise).
-

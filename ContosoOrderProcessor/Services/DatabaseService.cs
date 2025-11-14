@@ -49,10 +49,10 @@ namespace ContosoOrderProcessor.Services
                 
                 return new Customer(
                     customerId, 
-                    "John Doe", 
-                    "john.doe@example.com",
+                    "Lee Gu", 
+                    "lee.gu@example.com",
                     "+1-555-0123",
-                    "123 Main St, Seattle, WA 98101"
+                    "123 Main St, Seattle, WA 98765"
                 );
             }
             catch (Exception ex)
