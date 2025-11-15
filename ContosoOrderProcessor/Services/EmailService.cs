@@ -5,7 +5,10 @@ namespace ContosoOrderProcessor.Services
     public class EmailService
     {
         // SECURITY ISSUE: Hard-coded SendGrid API key
-        private const string SendGridApiKey = "SG.abcDEF123ghiJKL456mnoP789.qrstUVWXYZ012-abcdefgh345_ijklmnop678QRSTUVWXYZ901234567890ABC";
+        private const string SendGridApiKey = "SG.ngeVfQFYQlKU0ufo8x5d1A.TwL2iGABf9DHoTf-09kqeF8tAmbihYzrnopqrstuvw";
+        
+        // SECURITY ISSUE: Hard-coded Mailgun API key
+        private const string MailgunApiKey = "key-1234567890abcdef1234567890abcdef";
         
         // SECURITY ISSUE: Hard-coded SMTP credentials
         private const string SmtpHost = "smtp.contoso.com";

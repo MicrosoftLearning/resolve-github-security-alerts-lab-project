@@ -10,6 +10,9 @@ namespace ContosoOrderProcessor.Services
         // SECURITY ISSUE: Hard-coded PayPal API credentials
         private const string PayPalClientId = "AYjcyBXRO7UZLP5MNqQmH6BfGHJ8KLMnoPQRSTUVWXYZ-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs";
         private const string PayPalSecret = "EJKLMnoPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijk";
+        
+        // SECURITY ISSUE: Hard-coded Square Access Token
+        private const string SquareAccessToken = "EAAAEOuLQavTvyym5PByGZrGdRLWiL_RB0n8YF0gELTxFqLhNp6bKHRhA6P7Uv5F";
 
         public bool ProcessPayment(Order order)
         {

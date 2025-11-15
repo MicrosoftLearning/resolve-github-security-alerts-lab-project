@@ -9,17 +9,27 @@ namespace ContosoOrderProcessor.Configuration
 
         // SECURITY ISSUE: Hard-coded AWS credentials
         public const string AwsAccessKeyId = "AKIAIOSFODNN7EXAMPLE";
-        public const string AwsSecretAccessKey = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
+        public const string AwsSecretAccessKey = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYzABCDEFGHIJ";
         public const string AwsRegion = "us-west-2";
         public const string AwsS3Bucket = "contoso-order-documents";
 
         // SECURITY ISSUE: Hard-coded Azure Storage connection string
-        public const string AzureStorageConnectionString = "DefaultEndpointsProtocol=https;AccountName=contosostorageacct;AccountKey=abc123XYZ789+defGHI456/jklMNO012+pqrSTU345/vwxYZ678+abcDEF901==;EndpointSuffix=core.windows.net";
+        public const string AzureStorageConnectionString = "DefaultEndpointsProtocol=https;AccountName=contosostorageacct;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;EndpointSuffix=core.windows.net";
 
         // SECURITY ISSUE: Hard-coded API keys for third-party services
         public const string TwilioAccountSid = "AC1234567890abcdef1234567890abcdef";
         public const string TwilioAuthToken = "1234567890abcdef1234567890abcdef";
         public const string TwilioPhoneNumber = "+1-555-0199";
+        
+        // SECURITY ISSUE: Hard-coded Slack tokens
+        public const string SlackBotToken = "xoxb-1234567890123-1234567890123-abcdefghijklmnopqrstuvwx";
+        public const string SlackWebhookUrl = "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX";
+        
+        // SECURITY ISSUE: Hard-coded GitHub Personal Access Token
+        public const string GitHubToken = "ghp_1234567890abcdefghijklmnopqrstuvwxyz12";
+        
+        // SECURITY ISSUE: Hard-coded npm token
+        public const string NpmToken = "npm_1A2b3C4d5E6f7G8h9I0j1K2l3M4n5O6p7Q8r";
 
         // SECURITY ISSUE: Hard-coded JWT secret key
         public const string JwtSecretKey = "ThisIsAVerySecretKeyForJwtTokenGeneration2024!";

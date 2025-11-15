@@ -6,7 +6,7 @@ namespace ContosoOrderProcessor.Services
     public class DatabaseService
     {
         // SECURITY ISSUE: Hard-coded database connection string with credentials
-        private const string ConnectionString = "Server=tcp:contoso-orders.database.windows.net,1433;Initial Catalog=ContosoOrdersDB;User ID=orderadmin;Password=C0nt0s0P@ssw0rd2024!;Encrypt=True;TrustServerCertificate=False;";
+        private const string ConnectionString = "Server=tcp:contoso-orders.database.windows.net,1433;Initial Catalog=ContosoOrdersDB;User ID=orderadmin;Password=C0nt0s0P@ssw0rd2024!;Encrypt=True;TrustServerCertificate=False;MultipleActiveResultSets=False;Connection Timeout=30;";
 
         public bool SaveOrder(Order order)
         {
